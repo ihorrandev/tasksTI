@@ -7,6 +7,7 @@
     <title>Chamados</title>
 </head>
 <body>
-   <button>Editar</button>
+   <h1>IT Tasks system</h1>
+   <p>Please fill the form to send a task to IT setor!</p>
 </body>
 </html>

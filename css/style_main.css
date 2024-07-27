@@ -2,12 +2,15 @@
 
 *{
     font-family: Inter, sans-serif;
+    color: white;
 }
 
 body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    background-color: #1d1d1d;
 }
 
 button{
@@ -22,4 +25,10 @@ button{
 
 button:hover{
     background-color: #1a1f82;
+}
+
+h1{
+    color: #929292;
+    font-weight: 600;
+    font-size: 20px;
 }
