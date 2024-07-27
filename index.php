@@ -7,7 +7,16 @@
     <title>Chamados</title>
 </head>
 <body>
-   <h1>IT Tasks system</h1>
-   <p>Please fill the form to send a task to IT setor!</p>
+    <div class="main">
+        <div class="flex-column">
+            <h1>IT Tasks system</h1>
+            <p>Please select the button below!</p>
+        </div>
+
+        <div class="flex-row">
+            <a href="user/userCreate.php"><button>New User</button></a>
+            <button>New Task</button>
+        </div>
+    </div>
 </body>
 </html>
