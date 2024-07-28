@@ -10,7 +10,7 @@
 <body>
     <div class="main">
         <h1>Criar Novo Usuário</h1>
-        <form action="_userCreate.php" method="post">
+        <form id="forms">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" >
             
@@ -20,18 +20,22 @@
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" >
             
-            <button type="submit" value="Criar Usuário" class="btn-submit">Criar Usuario</button>
+            <button type="button" value="Criar Usuário" class="btn-submit">Criar Usuario</button>
         </form>
+        <?php include '../components/modal.php'; ?>
     </div>
+
+    
 
     <script>
         let nameUser = document.querySelector('#nome');
         let emailUser = document.querySelector('#email');
         let passwordUser = document.querySelector('#senha');
         let button = document.querySelector(".btn-submit");
+        let modal = document.querySelector(".modal-bases");
         
-        button.addEventListener('submit', function(event) {
 
+        button.addEventListener('click', function(event) {
         $.ajax({
             url: '_userCreate.php',
             type: 'post',
@@ -42,7 +46,8 @@
             },
             dataType: 'json', 
             success: function(response) {
-                console.log(response);
+                modal.style.display = 'flex';
+                
             },                                 
             error: function(xhr, status, error) { 
                 console.error('Erro:', error);

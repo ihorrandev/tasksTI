@@ -10,6 +10,7 @@
     
         $sql = "INSERT INTO tb_usuarios(nome, email, senha) VALUES('$nome', '$email', '$senha')";
         $response = executeQuery($sql);
+        
         header("Location: userCreate.php");
         exit();
         header('Content-Type: application/json');
