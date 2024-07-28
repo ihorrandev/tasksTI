@@ -36,6 +36,7 @@
         
 
         button.addEventListener('click', function(event) {
+            modal.style.display = 'flex';
         $.ajax({
             url: '_userCreate.php',
             type: 'post',
@@ -46,7 +47,7 @@
             },
             dataType: 'json', 
             success: function(response) {
-                modal.style.display = 'flex';
+                
                 
             },                                 
             error: function(xhr, status, error) { 
