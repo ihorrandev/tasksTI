@@ -1,13 +1,10 @@
 <?php
-    $userName = "root";
-    $serverName = "localhost";
-    $password = "root";
-    $dbName = "ti";
-
-    $con = new mysqli($serverName, $userName, $password, $dbName);
-    try{
-        echo "Conectou";
-    }catch(Exception $e){
-        echo "Deu pau!";
+    getDatabaseConnection();
+    function getDatabaseConnection() {
+        $con = new mysqli(SERVER_NAME, USER_NAME, PASSWORD, DB_NAME);
+        if ($con->connect_error) {
+            die("Falha na conexão: " . $con->connect_error);
+        }
+        return $con;
     }
 ?>
