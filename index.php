@@ -9,7 +9,7 @@
 <body>
     <div class="main">
         <div class="flex-column">
-            <h1>IT Tasks systema</h1>
+            <h1>IT Tasks system</h1>
             <p>Please select the button below!</p>
         </div>
 
